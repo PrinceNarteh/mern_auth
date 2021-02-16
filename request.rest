@@ -4,7 +4,7 @@ Content-Type: Application/json
 
 {
     "username": "Prince",
-    "email": "prince@gmail.com",
+    "email": "donprinart@gmail.com",
     "password": "123456"
 }
 
@@ -13,6 +13,22 @@ POST http://localhost:4000/api/auth/login HTTP/1.1
 Content-Type: Application/json
 
 {
-    "email": "prince@gmail.com",
-    "password": "123456"
+    "email": "donprinart@gmail.com",
+    "password": "12345678"
+}
+
+### Forgot Password
+POST http://localhost:4000/api/auth/forgotpassword HTTP/1.1
+Content-Type: Application/json
+
+{
+    "email": "donprinart@gmail.com"
+}
+
+### Forgot Password
+PUT http://localhost:4000/api/auth/resetpassword/acc6a8611c7d74b51b0aeed50d7f8082f2bdf0da  HTTP/1.1
+Content-Type: Application/json
+
+{
+    "password": "12345678"
 }
